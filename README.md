@@ -1,2 +1,2 @@
-# -JornadaMicrosoft
+# JornadaMicrosoft
 [FORMAÇÃO MS-DEV] 
