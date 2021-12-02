@@ -47,14 +47,19 @@ namespace Aula02
 
         public static void OperadorAritmetico()
         {
+            //tipo //nome da variavel // sinal de = representa atribuição;
 
             int primeiro = 1;
             int segundo = 10;
             int terceiro = 20;
 
+            //soma de todas as variaveis do tipo int.
             Console.WriteLine("Soma de todos os números: " + (primeiro + segundo + terceiro));
+            //subtração  de todas as variaveis do tipo int.
             Console.WriteLine("Subtração: " + (terceiro - segundo - primeiro));
+            //multiplicação  de todas as variaveis do tipo int.
             Console.WriteLine("Multiplicação: " + (terceiro * segundo * primeiro));
+            //divisão  de todas as variaveis do tipo int.
             Console.WriteLine("Divisão: " + (terceiro / segundo));
         }
 
@@ -64,18 +69,23 @@ namespace Aula02
             Console.WriteLine(a);
             Console.WriteLine("------------");
 
+
+            //representa a atribuição de A para =>  A + 2;
             a += 2;
             Console.WriteLine(a);
             Console.WriteLine("------------");
 
-
+            //representa a atribuição de ABC para =>  ABC + DEF;
             string alfabeto = "ABC";
             alfabeto += "DEF";
             Console.WriteLine(alfabeto);
 
             Console.WriteLine("------------");
 
+            //voltamos a variavel a para o valor 10;
             a = 10; //receber 10.
+
+            //representa a atribuicao de a para a * 3. (10*3)
             a *= 3; //10 * 3;
             Console.WriteLine(a);
 
@@ -83,16 +93,17 @@ namespace Aula02
 
         public static void OperadorRelacional()
         {
-
+            //bool => tipo de variavel que armazena informações TRUE OU FALSE.
+             
 
             int a = 10;
             bool resposta = a >= 10; //resposta sempre será TRUE OU FALSE.
 
             Console.WriteLine("Valor da resposta:" + resposta);
 
-
-            bool menor = a < 10;
-            bool maiorIgual = a >= 30;
+                             
+            bool menor = a < 10;  //menor
+            bool maiorIgual = a >= 30; //maior ou igual
             bool igual = (a == 10);  //igualdade
             bool diferente = (a != 10); //diferente.
 
@@ -106,7 +117,9 @@ namespace Aula02
 
         public static void OperadorLogico()
         {
-
+            //&& = E
+            // || = OU
+            // ! = NOT (não)
 
             int salario1 = 100;
             int salario2 = 50;
@@ -114,7 +127,7 @@ namespace Aula02
 
             //Quero saber se o salario1 é maior que o 2 e tbm maior que o 3.
 
-            //&& significa E
+            //&& significa E          //condicao 1      E  //condicao 2
             bool resultadoSalario = salario1 > salario2 && salario1 > salario3;
 
             // primeira condicao = (TRUE OU FALSE) E ( TRUE OU FALSE)
@@ -147,7 +160,7 @@ namespace Aula02
         {
             Console.WriteLine("Entrada de dados");
             Console.WriteLine("Digite o seu nome");
-
+                                   //leitura da linha ira atribuir a variavel após o usuario apertar ENTER.
             string nomeDoUsuario = Console.ReadLine();
 
             Console.WriteLine("O nome digitado é: " + nomeDoUsuario);
@@ -172,12 +185,14 @@ namespace Aula02
             //Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2} reais.", nome, idade, saldo);
 
             Console.WriteLine(saldo);
-            Console.WriteLine(saldo.ToString("F2"));
+            Console.WriteLine(saldo.ToString("F2")); //2 casas decimais e arredonda.
 
             Console.WriteLine(saldo.ToString("F4"));
 
 
             Console.WriteLine(saldo.ToString("F2", CultureInfo.InvariantCulture));
+            //NECESSARIO IMPORTAR using System.Globalization; nas primeiras linhas do codigo.
+
 
 
 
