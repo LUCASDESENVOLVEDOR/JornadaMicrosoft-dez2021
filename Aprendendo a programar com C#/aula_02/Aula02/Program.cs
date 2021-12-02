@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Aula02
 {
@@ -6,13 +7,18 @@ namespace Aula02
     {
         static void Main(string[] args) //classe pricipal;
         {
-            Console.WriteLine("Entrada de dados");
-            Console.WriteLine("Digite o seu nome");
+            //Para executar basta retirar o comentario da função desejada.
 
-            string nomeDoUsuario = Console.ReadLine();
+            //POR EXEMPLO: abaixo vai ser executado apenas OperadorRelacional.
+            
 
-            Console.WriteLine("O nome digitado é: " + nomeDoUsuario);
-
+            //Inicio();
+            //OperadorAritmetico();
+            //OperadorAtribucao();
+            OperadorRelacional();
+            // OperadorLogico();
+            //Entrada();
+            //Saida();
 
         }
 
@@ -136,6 +142,106 @@ namespace Aula02
 
         }
 
+
+        public static void Entrada()
+        {
+            Console.WriteLine("Entrada de dados");
+            Console.WriteLine("Digite o seu nome");
+
+            string nomeDoUsuario = Console.ReadLine();
+
+            Console.WriteLine("O nome digitado é: " + nomeDoUsuario);
+
+
+        }
+
+        public static void Saida()
+        {
+
+            int idade = 28;
+            double saldo = 10.35784;
+            string nome = "Maria";
+
+            //Console.WriteLine("Maria tem 28 anos e tem saldo igual a 10.35784 reais.");
+
+            //interpolação. { } representar a variavel.
+
+            //o primeiro {} sempre inicia do zero.
+            // o segundo {} vai na sequencia. 1 ,....
+
+            //Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2} reais.", nome, idade, saldo);
+
+            Console.WriteLine(saldo);
+            Console.WriteLine(saldo.ToString("F2"));
+
+            Console.WriteLine(saldo.ToString("F4"));
+
+
+            Console.WriteLine(saldo.ToString("F2", CultureInfo.InvariantCulture));
+
+
+
+        }
+
+        public static void Parse()
+        {
+
+            //string - toString().
+
+            //parse
+
+
+            double numero = 10.45;
+            string numero2 = "20";
+
+            //Parse
+
+            Console.WriteLine(double.Parse(numero2) + numero);
+
+
+
+        }
+
+        public static void Exercicio()
+        {
+            /* Execicio 1  */
+
+            string produto1 = "Computador";
+            string produto2 = "Mesa de escritório";
+
+            int idade = 30;
+            int codigo = 5290;
+            char genero = 'M';
+
+            double preco1 = 2100.0;
+            double preco2 = 650.50;
+            double medida = 53.234567;
+
+            string forma = @"
+
+
+                        Usando os valores das variáveis, produza a seguinte saída na tela do console:
+
+                        Produtos:
+                        Computador, cujo preço é $ 2100,00
+                        Mesa de escritório, cujo preço é $ 650,20
+
+                        Registro: 30 anos de idade, código 5290 e gênero M
+
+
+                        Medida com oito casas decimais: 53,23456700
+                        Arredondado (três casas decimais): 53,235
+                        Separador decimal invariant culture: 53.235
+
+
+
+                     ";
+
+
+            //EXERCICIO 2 
+            //Elabore um algoritmo que receba e calcule a idade média de 5 alunos.
+
+        }
 
 
     }
