@@ -1,2 +1,2 @@
 # JornadaMicrosoft
-[FORMAÇÃO MS-DEV] 
+[FORMAÇÃO MS-DEV] .
