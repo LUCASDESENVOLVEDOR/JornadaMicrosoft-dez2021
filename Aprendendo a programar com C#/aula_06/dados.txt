@@ -1,0 +1,4 @@
+Lucas 28 Dados
+Igor 22 BackEnd
+Paula 29 FrontEnd
+Duda 19 Mobile
