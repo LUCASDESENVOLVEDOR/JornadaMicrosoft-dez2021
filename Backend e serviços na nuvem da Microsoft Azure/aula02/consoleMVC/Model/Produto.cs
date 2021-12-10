@@ -53,7 +53,6 @@ namespace consoleMVC.Model
         //funcao vai ler todos os produtos.
 
 
-
         public List<Produto> Ler()
         {
             List<Produto> ListaProdutos = new List<Produto>();

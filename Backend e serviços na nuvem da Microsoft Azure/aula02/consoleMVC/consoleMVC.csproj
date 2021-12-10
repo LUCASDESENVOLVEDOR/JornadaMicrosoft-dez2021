@@ -6,8 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="View\" />
+    <Content Include="bin\Debug\net5.0\consoleMVC.deps.json" />
+    <Content Include="bin\Debug\net5.0\consoleMVC.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\consoleMVC.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\consoleMVC.dll" />
+    <None Include="bin\Debug\net5.0\consoleMVC.exe" />
+    <None Include="bin\Debug\net5.0\consoleMVC.pdb" />
+    <None Include="bin\Debug\net5.0\Database\Produto.csv" />
+    <None Include="bin\Debug\net5.0\ref\consoleMVC.dll" />
   </ItemGroup>
 
 </Project>
