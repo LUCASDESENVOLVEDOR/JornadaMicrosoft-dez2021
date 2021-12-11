@@ -1,5 +1,6 @@
 ﻿using E_JOGOS.Interface;
 using System.Collections.Generic;
+using System.IO;
 
 namespace E_JOGOS.Models
 {
@@ -24,10 +25,15 @@ namespace E_JOGOS.Models
 
 
         //funcao que vai preparar/converter de string para o
-         //tipo equipe.
+        //tipo equipe.
 
-       // private string 
+        // private string 
 
+
+        private string Prepare(Equipe e)
+        {
+            return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
+        }
 
 
         public void Create(Equipe nova_equipe)
@@ -36,9 +42,11 @@ namespace E_JOGOS.Models
             //e gravar no CSV.
             //
 
+            //  "item;item;item;";
 
+            string[] linha = { Prepare(nova_equipe) };
 
-
+            File.AppendAllLines(path, linha);
         }
 
         public void Delete(int idEquipe)
@@ -48,7 +56,21 @@ namespace E_JOGOS.Models
 
         public List<Equipe> ReadAll()
         {
-            throw new System.NotImplementedException();
+            List<Equipe> equipes = new List<Equipe>();
+            string[] linhas = File.ReadAllLines(path);
+
+            foreach (string item in linhas)
+            {
+                Equipe equipe = new Equipe();
+                equipe.IdEquipe = int.Parse(item.Split(';')[0]);
+                equipe.Nome = item.Split(';')[1];
+                equipe.Imagem = item.Split(';')[2];
+
+                equipes.Add(equipe);
+            }
+
+            return equipes;
+
         }
 
         public void Update(Equipe equipe)
